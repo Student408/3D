@@ -3,52 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Website</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Advaita - Battle Magic</title>
     <style>
-        body { margin: 0; }
-        canvas { display: block; }
+        
     </style>
 </head>
 <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-    <script>
-        // JavaScript code for Three.js setup
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.body.appendChild(renderer.domElement);
+    <div class="container">
+        <header>
+            <div class="logo">Advaita</div>
+            <nav>
+                <ul>
+                    <li>Events</li>
+                    <li>Sponsor's</li>
+                    <li>Contact us</li>
+                    <li>About us</li>
+                </ul>
+            </nav>
+            <!-- <input type="text" class="search-bar" placeholder="Search games..."> -->
+            <div class="auth-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign Up</button>
+            </div>
+        </header>
+        
+        <main>
+            <section class="hero">
+                <!-- <img src="./individual/1st circle.png" alt="Overlay Image" class="hero-overlay">
+                <img src="./individual/2nd circle.png" alt="Overlay Image" class="hero-overlay">
+                <img src="./individual/3rd circle.png" alt="Overlay Image" class="hero-overlay">
+                <img src="./individual/circle 4th.png" alt="Overlay Image" class="hero-overlay">
+                <img src="./individual/line of 3rd circle.png" alt="Overlay Image" class="hero-overlay">
+                <img src="./individual/line of 4th circle.png" alt="Overlay Image" class="hero-overlay">
+                <img src="./individual/r1.png" alt="Overlay Image" class="hero-overlay">
+                <img src="./individual/r2.png" alt="Overlay Image" class="hero-overlay">
+                <img src="./individual/r3.png" alt="Overlay Image" class="hero-overlay">
+                <img src="./individual/r4.png" alt="Overlay Image" class="hero-overlay">
+                <img src="./individual/r5.png" alt="Overlay Image" class="hero-overlay">
+                <img src="./individual/r6.png" alt="Overlay Image" class="hero-overlay">
+                <img src="./individual/r7.png" alt="Overlay Image" class="hero-overlay">
+                <img src="./individual/r8.png" alt="Overlay Image" class="hero-overlay">
+                <img src="./individual/star.png" alt="Overlay Image" class="overlay"> -->
 
-        const ambientLight = new THREE.AmbientLight(0x404040);
-        scene.add(ambientLight);
+                <img src="./fest.svg" alt="Overlay Image" class="hero-overlay">
+               
 
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-        scene.add(directionalLight);
 
-        const loader = new THREE.GLTFLoader();
-        loader.load('model.glb', function (gltf) {
-            scene.add(gltf.scene);
-        }, undefined, function (error) {
-            console.error(error);
-        });
+                <div class="hero-content">
+                    <h1>ADVAITA</h1>
+                    <!-- <p>Dive into the new generation of Battle Pass!</p>
+                    <button class="cta-btn">Continue</button>
+                    <br>
+                    <button class="event-rules">Event Rules</button> -->
+                </div>
+            </section>
+            
+            
+            
+        </main>
+        
+        <footer>
+            <div class="payment-icons-container">
+                <img src="/api/placeholder/40/25" alt="Visa" class="payment-icon">
+                <img src="/api/placeholder/40/25" alt="Mastercard" class="payment-icon">
+                <img src="/api/placeholder/40/25" alt="Jeton" class="payment-icon">
+                <img src="/api/placeholder/40/25" alt="Bitcoin" class="payment-icon">
+                <img src="/api/placeholder/40/25" alt="Ethereum" class="payment-icon">
+                <img src="/api/placeholder/40/25" alt="Dogecoin" class="payment-icon">
+                <img src="/api/placeholder/40/25" alt="Tether" class="payment-icon">
+                <img src="/api/placeholder/40/25" alt="TRON" class="payment-icon">
+                <img src="/api/placeholder/40/25" alt="Cardano" class="payment-icon">
+                <img src="/api/placeholder/40/25" alt="Instadebit" class="payment-icon">
+                <!-- Duplicate icons for smooth looping -->
+                <img src="/api/placeholder/40/25" alt="Visa" class="payment-icon">
+                <img src="/api/placeholder/40/25" alt="Mastercard" class="payment-icon">
+                <img src="/api/placeholder/40/25" alt="Jeton" class="payment-icon">
+                <img src="/api/placeholder/40/25" alt="Bitcoin" class="payment-icon">
+                <img src="/api/placeholder/40/25" alt="Ethereum" class="payment-icon">
+                <img src="/api/placeholder/40/25" alt="Dogecoin" class="payment-icon">
+                <img src="/api/placeholder/40/25" alt="Tether" class="payment-icon">
+                <img src="/api/placeholder/40/25" alt="TRON" class="payment-icon">
+                <img src="/api/placeholder/40/25" alt="Cardano" class="payment-icon">
+                <img src="/api/placeholder/40/25" alt="Instadebit" class="payment-icon">
+            </div>
+        </footer>
+    </div>
 
-        camera.position.z = 5;
-
-        function animate() {
-            requestAnimationFrame(animate);
-            renderer.render(scene, camera);
-        }
-
-        animate();
-
-        window.addEventListener('resize', () => {
-            const width = window.innerWidth;
-            const height = window.innerHeight;
-            renderer.setSize(width, height);
-            camera.aspect = width / height;
-            camera.updateProjectionMatrix();
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
