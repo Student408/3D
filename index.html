@@ -3,93 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
     <link rel="stylesheet" href="style.css">
-    <title>Advaita - Battle Magic</title>
-    <style>
-        
-    </style>
+    <script src="script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">Advaita</div>
-            <nav>
-                <ul>
-                    <li>Events</li>
-                    <li>Sponsor's</li>
-                    <li>Contact us</li>
-                    <li>About us</li>
-                </ul>
-            </nav>
-            <!-- <input type="text" class="search-bar" placeholder="Search games..."> -->
-            <div class="auth-buttons">
-                <button class="login-btn">Login</button>
-                <button class="signup-btn">Sign Up</button>
+    <div class="w-full bg-zinc-900">
+        <div class="parent relative top-0 left-0 w-full h-[700vh]">
+            <div class="w-full sticky top-0 left-0 h-screen">
+                <canvas class="w-full h-screen" id="frame"></canvas>
             </div>
-        </header>
-        
-        <main>
-            <section class="hero">
-                <!-- <img src="./individual/1st circle.png" alt="Overlay Image" class="hero-overlay">
-                <img src="./individual/2nd circle.png" alt="Overlay Image" class="hero-overlay">
-                <img src="./individual/3rd circle.png" alt="Overlay Image" class="hero-overlay">
-                <img src="./individual/circle 4th.png" alt="Overlay Image" class="hero-overlay">
-                <img src="./individual/line of 3rd circle.png" alt="Overlay Image" class="hero-overlay">
-                <img src="./individual/line of 4th circle.png" alt="Overlay Image" class="hero-overlay">
-                <img src="./individual/r1.png" alt="Overlay Image" class="hero-overlay">
-                <img src="./individual/r2.png" alt="Overlay Image" class="hero-overlay">
-                <img src="./individual/r3.png" alt="Overlay Image" class="hero-overlay">
-                <img src="./individual/r4.png" alt="Overlay Image" class="hero-overlay">
-                <img src="./individual/r5.png" alt="Overlay Image" class="hero-overlay">
-                <img src="./individual/r6.png" alt="Overlay Image" class="hero-overlay">
-                <img src="./individual/r7.png" alt="Overlay Image" class="hero-overlay">
-                <img src="./individual/r8.png" alt="Overlay Image" class="hero-overlay">
-                <img src="./individual/star.png" alt="Overlay Image" class="overlay"> -->
-
-                <img src="./fest.svg" alt="Overlay Image" class="hero-overlay">
-               
-
-
-                <div class="hero-content">
-                    <h1>ADVAITA</h1>
-                    <!-- <p>Dive into the new generation of Battle Pass!</p>
-                    <button class="cta-btn">Continue</button>
-                    <br>
-                    <button class="event-rules">Event Rules</button> -->
-                </div>
-            </section>
-            
-            
-            
-        </main>
-        
-        <footer>
-            <div class="payment-icons-container">
-                <img src="/api/placeholder/40/25" alt="Visa" class="payment-icon">
-                <img src="/api/placeholder/40/25" alt="Mastercard" class="payment-icon">
-                <img src="/api/placeholder/40/25" alt="Jeton" class="payment-icon">
-                <img src="/api/placeholder/40/25" alt="Bitcoin" class="payment-icon">
-                <img src="/api/placeholder/40/25" alt="Ethereum" class="payment-icon">
-                <img src="/api/placeholder/40/25" alt="Dogecoin" class="payment-icon">
-                <img src="/api/placeholder/40/25" alt="Tether" class="payment-icon">
-                <img src="/api/placeholder/40/25" alt="TRON" class="payment-icon">
-                <img src="/api/placeholder/40/25" alt="Cardano" class="payment-icon">
-                <img src="/api/placeholder/40/25" alt="Instadebit" class="payment-icon">
-                <!-- Duplicate icons for smooth looping -->
-                <img src="/api/placeholder/40/25" alt="Visa" class="payment-icon">
-                <img src="/api/placeholder/40/25" alt="Mastercard" class="payment-icon">
-                <img src="/api/placeholder/40/25" alt="Jeton" class="payment-icon">
-                <img src="/api/placeholder/40/25" alt="Bitcoin" class="payment-icon">
-                <img src="/api/placeholder/40/25" alt="Ethereum" class="payment-icon">
-                <img src="/api/placeholder/40/25" alt="Dogecoin" class="payment-icon">
-                <img src="/api/placeholder/40/25" alt="Tether" class="payment-icon">
-                <img src="/api/placeholder/40/25" alt="TRON" class="payment-icon">
-                <img src="/api/placeholder/40/25" alt="Cardano" class="payment-icon">
-                <img src="/api/placeholder/40/25" alt="Instadebit" class="payment-icon">
-            </div>
-        </footer>
+        </div>
     </div>
-
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 </html>
