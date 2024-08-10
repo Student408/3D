@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:400,500'>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-sans">
+    <div id="loading-container" class="container">
+        <div class="progress-label">Loading</div>
+        <div class="progress-percentage" id="progress-percentage">0%</div>
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <div id="rotation-message" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 z-50 hidden">
+        <p class="text-2xl text-center px-4">Please rotate your device to landscape mode</p>
+    </div>
+
+    <div id="main-content" class="hidden">
+        <div class="w-full bg-zinc-900">
+            <div class="parent relative top-0 left-0 w-full h-[700vh]">
+                <div class="w-full sticky top-0 left-0 h-screen">
+                    <canvas class="w-full h-screen" id="frame"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js" defer></script>
+</body>
+</html>

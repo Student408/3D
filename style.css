@@ -1,0 +1,87 @@
+html {
+    scroll-behavior: smooth;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Container styling */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 300px;
+    text-align: center;
+}
+
+/* Progress bar styling */
+.progress-bar {
+    width: 0%;
+    height: 6px;
+    background: linear-gradient(
+        90deg,
+        #FF375F,
+        #FF9F0A,
+        #FFD60A,
+        #30D158,
+        #0A84FF,
+        #5E5CE6
+    );
+    margin-top: 20px;
+    border-radius: 3px;
+    transition: width 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Shadow effect */
+.shadow {
+    display: none; /* Removing the skewed shadow for a cleaner look */
+}
+
+/* Additional iOS-inspired styles */
+.progress-label {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    opacity: 0.8;
+}
+
+.progress-percentage {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: light) {
+    html {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    .progress-bar {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+canvas {
+    width: 100%; /* Display size */
+    height: auto; /* Maintain aspect ratio */
+    image-rendering: auto; /* Crisper images */
+    image-rendering: -webkit-optimize-contrast; /* For webkit-based browsers */
+    image-rendering: pixelated; /* Optional, for a pixelated look */
+    filter: contrast(110%) brightness(105%); /* Optional, for enhanced sharpness */
+}
+
+
+#rotation-message {
+    display: none;
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+    #rotation-message {
+        display: flex;
+    }
+}
